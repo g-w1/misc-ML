@@ -8,5 +8,7 @@ with requests.Session() as session:
     r = session.get(after)
     soup = BeautifulSoup(r.content, 'html.parser')
     a = soup.find_all("div",class_ = "btn-align-center")
-    print(a)
-
+    for belt in a:
+      print(belt.a.text)
+      print("https://www.edge-ma.com/student-area/curriculum/"+belt.a["href"])
+      print("---------------------")
