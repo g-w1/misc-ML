@@ -1,4 +1,4 @@
 async function loadmodel(){
-model = await tf.loadModel('https://g-w1.github.io/toys/model.json');
+  const model = await tf.loadLayersModel(‘path/to/model.json’);
   concole.log(model);
 }
