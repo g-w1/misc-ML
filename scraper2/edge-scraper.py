@@ -12,7 +12,7 @@ with requests.Session() as session:
     r = session.get(after)
     soup = BeautifulSoup(r.content, 'html.parser')
     pages= []
-    subpages={}
+    subpages=[]
     subsubpages=[]
     for i in soup.find_all("a",attrs={"class":"btn btn-primary"}):
         a =(i['href'])
@@ -21,11 +21,11 @@ with requests.Session() as session:
         links = (page.find_all("tr"))
         for i in links:
             try:
-                print(i.td.td)
-                subpages[i.td.td.div.text] = (i['onclick'][9:][:-2])
+                subpages.append(i['onclick'][9:][:-2])
             except:
 
                 pass
-    print(subpages)
-    # for a in subpages:
-        # subsubpages.append(BeautifulSoup(session.get("http://edgemartialarts.sparkuniversity.co/"+ a).content, 'html.parser'))
+    # print(subpages)
+    for a in subpages:
+        subsubpages.append(BeautifulSoup(session.get("http://edgemartialarts.sparkuniversity.co/"+ a).content, 'html.parser'))
+    print(subsubpages)
