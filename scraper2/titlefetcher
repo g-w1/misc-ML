@@ -3,4 +3,4 @@ while read i; do
 echo "<a href="$i">"
 wget -qO- $i | perl -l -0777 -ne 'print $1 if /<title.*?>\s*(.*?)\s*<\/title/si'
 echo "</a><br/>"
-done < vids.txt
+done < youtube-urls.txt
