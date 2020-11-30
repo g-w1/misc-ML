@@ -13,7 +13,7 @@ function load() {
   let mode = modes[getRandomDice() - 1];
   let seq = getRandomDice();
 
-  let string_to_put = `Working on sequence <u>${seq}</u> of <u>${kata}</u>, with a focus on <u>${mode}</u>.`;
+  let string_to_put = `Working on sequence <u><b>${seq}</b></u> of <u><b>${kata}</b></u>, with a focus on <u><b>${mode}</b></u>.`;
 
   let lol = document.getElementById("lol");
   lol.innerHTML = string_to_put;
