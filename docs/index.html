@@ -12,21 +12,28 @@
       name="a randomizer for the competition team"
       content="Compteam Randomizer"
     />
+    <style>
+      *.unselectable {
+        -moz-user-select: -moz-none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+    </style>
   </head>
 
   <body>
     <div class="card">
-      <h1 id="lolo" name="lolo">Today's Training:</h1>
-      <div class="card ~positive !high">
+      <h1 id="lolo" name="lolo" class="unselectable">Today's Training:</h1>
+      <div class="card ~positive !high unselectable">
         <h2 id="lol" name="lol"></h2>
       </div>
 
-      <br>
-      <span
-        class="button ~urge"
-        value="Reload Page"
-        onClick="load()"
-        >Re-roll</span>
+      <br />
+      <span class="button ~urge unselectable" value="Reload Page" onClick="load()"
+        >Re-roll</span
+      >
     </div>
   </body>
 
