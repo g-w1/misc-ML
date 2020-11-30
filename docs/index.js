@@ -1,5 +1,5 @@
 const katas = ["Anan", "Ohan Dai", "Heiku"];
-const modes = ["Athletics", "Technique", "Kime"];
+const modes = ["Stances", "Technique", "Transitions", "Timing", "Breathing", "Kime"];
 
 function getRandomDice() {
   return Math.floor(Math.random() * 6) + 1;
@@ -10,7 +10,7 @@ function getRandom13() {
 
 function load() {
   let kata = katas[getRandom13()];
-  let mode = modes[getRandom13()];
+  let mode = modes[getRandomDice() - 1];
   let seq = getRandomDice();
 
   let string_to_put = `Kata: ${kata}, Focus: ${mode}, Sequence: ${seq}`;
