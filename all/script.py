@@ -9,4 +9,4 @@ with open("scr.txt","r") as f:
 for i in all:
     print(i)
     pyautogui.write(i)
-    # time.sleep(2)
+    time.sleep(.6)
